@@ -8,7 +8,7 @@ version: '3'
   services:
 [...]
     mongo-exporter:
-      image: pandry/mongo-exporter
+      image: pandry/mongodb-exporter
       restart: unless-stopped
       container_name: mongodb-exporter
       hostname: mongodb-exporter
@@ -28,7 +28,7 @@ version: '3'
 ### Docker run
 ```
 docker run -d \
---hostname mongo-exporter \
+--hostname mongodb-exporter \
 --name mongo-exporter \
 --restart unless-stopped \
 -p "9216:9216/tcp" \
